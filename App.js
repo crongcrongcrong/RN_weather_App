@@ -10,6 +10,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.text}>React Native Practice</Text>
       <Text style={{...styles.text, color: "blue", fontStyle: 10}}>React Native Practice</Text>
+      {/* <StatusBar  barStyle='dark-content' backgroundColor='blue' hidden={true} /> */}
       <StatusBar style="auto" />
     </View>
   );
