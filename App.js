@@ -8,9 +8,11 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>React Native Practice</Text>
-      <Text style={{...styles.text, color: "blue", fontStyle: 10}}>React Native Practice</Text>
-      {/* <StatusBar  barStyle='dark-content' backgroundColor='blue' hidden={true} /> */}
+      <Text style={styles.text}>결과: {number} </Text>
+      <View style={styles.btnGroup}>
+        <Button style={styles.btn} title="증가" onPress={() => setNumber(number + 1)}/>
+        <Button style={styles.btn} title="감소" onPress={() => setNumber(number - 1)}/>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -26,7 +28,18 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: 25,
-    color: "red",
     fontWeight: "bold",
+  },
+
+  btnGroup: {
+    flexDirection: "row",
+    gap: 10,
+  },
+
+  btn: {
+    width: 200,
+    height: 100
   }
+
+  
 });
